@@ -1,0 +1,24 @@
+#!/bin/bash
+python run.py 0 1000 &
+python run.py 1000 2000 &
+python run.py 2000 3000 &
+python run.py 3000 4000 &
+python run.py 4000 5000 &
+python run.py 5000 6000 &
+python run.py 6000 7000 &
+python run.py 7000 8000 &
+python run.py 8000 9000 &
+python run.py 9000 10000 &
+python run.py 10000 11000 &
+python run.py 11000 12000 &
+python run.py 12000 13000 &
+python run.py 13000 14000 &
+python run.py 14000 15000 &
+python run.py 15000 16000 &
+python run.py 16000 17000 &
+python run.py 17000 18000 &
+python run.py 18000 19000 &
+python run.py 19000 20000 &
+python run.py 20000 21000 &
+python run.py 21000 22000 &
+python run.py 22000 23000 &
