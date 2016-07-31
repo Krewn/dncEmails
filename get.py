@@ -10,6 +10,7 @@ chrome.addheaders = [('User-agent', '')]
 
 #print "Defining Methods"
 def snag(n):
+	print n
 	global chrome
 	htmltext = chrome.open("https://wikileaks.org/dnc-emails/emailid/"+str(n)).read()
 	soup = BeautifulSoup.BeautifulSoup(htmltext)
@@ -41,9 +42,23 @@ while(more):
 		print f
 		more = False
 """
+import os
 def snagRange(start,end):
 	for k in range(start,end):
-		emailDict = snag(k)
-		outPut = open(str(k),"w")
-		outPut.write(str(emailDict))
-		outPut.close()
+		if not os.path.isfile(str(k)):
+			try:
+				emailDict = snag(k)
+				outPut = open(str(k),"w")
+				outPut.write(str(emailDict))
+				outPut.close()
+			except:
+				print "error snagging "+str(k)
+	print "range complete::["+str(start)+"->"+str(end)+")"
+
+
+
+
+
+
+
+
